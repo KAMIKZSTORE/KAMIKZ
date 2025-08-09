@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kamikz — Demo TopUp QRIS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="container">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">KZ</div>
+        <div>
+          <div id="greet" class="greet">Hai, Pengguna</div>
+          <div id="trxCount" class="muted">0 Trx</div>
+        </div>
+      </div>
+      <div class="profile-area">
+        <div id="balanceLabel" class="small-muted">Saldo</div>
+        <div id="balance" class="balance">Rp 0</div>
+        <img id="hdrAvatar" class="avatar" src="" alt="avatar" title="Buka Profil">
+      </div>
+    </header>
+
+    <main>
+      <section class="card balance-card">
+        <div class="balance-top">
+          <div>
+            <div class="small-muted">Saldo Anda</div>
+            <div id="saldoMain" class="saldo-amount">Rp 0</div>
+          </div>
+          <div class="balance-actions">
+            <button id="btnTopUp" class="btn primary">Isi Saldo</button>
+            <button id="refreshBtn" class="btn ghost">Refresh</button>
+          </div>
+        </div>
+
+        <div class="quick-actions">
+          <div class="qa" id="qaTopUp"><div class="qa-ico">＋</div><div class="qa-label">Isi Saldo</div></div>
+          <div class="qa" id="qaTransfer"><div class="qa-ico">⇄</div><div class="qa-label">Transfer</div></div>
+          <div class="qa" id="qaMutasi"><div class="qa-ico">≡</div><div class="qa-label">Mutasi</div></div>
+          <div class="qa" id="qaProfile"><div class="qa-ico">👤</div><div class="qa-label">Profil</div></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Isi Ulang</h3>
+        <div class="menu-grid">
+          <div class="menu-item">Internet</div>
+          <div class="menu-item">Pulsa Reguler</div>
+          <div class="menu-item">Token PLN</div>
+          <div class="menu-item">Digital</div>
+          <div class="menu-item">E-Wallet</div>
+          <div class="menu-item">Tagihan</div>
+          <div class="menu-item">Pulsa Transfer</div>
+          <div class="menu-item">Lainnya</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Riwayat Terbaru</h3>
+        <div id="recentList" class="recent-list">
+          <div class="empty">Belum ada transaksi</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal wrapper -->
+  <div id="modalWrap" class="modal-wrap" aria-hidden="true">
+    <div id="modal" class="modal" role="dialog" aria-modal="true">
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
